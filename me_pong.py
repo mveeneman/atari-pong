@@ -117,7 +117,7 @@ def discount_rewards(rewards, gamma):
     This implements that logic by discounting the reward on previous actions based on how long ago they were taken"""
     discounted_rewards = np.zeros_like(rewards)
     running_add = 0
-    for t in reversed(xrange(0, rewards.size)):
+    for t in reversed(range(0, rewards.size)):
         if rewards[t] != 0:
             running_add = 0 # reset the sum, since this was a game boundary (pong specific!)
         running_add = running_add * gamma + rewards[t]
@@ -217,7 +217,7 @@ def main():
             episode_hidden_layer_values, episode_observations, episode_gradient_log_ps, episode_rewards = [], [], [], [] # reset values
             observation = env.reset() # reset env
             running_reward = reward_sum if running_reward is None else running_reward * 0.99 + reward_sum * 0.01
-            print 'resetting env. episode reward total was %f. running mean: %f' % (reward_sum, running_reward)
+            print ('resetting env. episode reward total was %f. running mean: %f' % (reward_sum, running_reward))
             reward_sum = 0
             prev_processed_observations = None
 

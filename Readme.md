@@ -2,6 +2,10 @@
 
 ![Atari Pong](https://i.ytimg.com/vi/moqeZusEMcA/hqdefault.jpg)
 
+### Update 
+
+This repo is a fork that runs with Python 3.5.2
+
 ### Introduction
 
 The code in this repository will let you train a Neural Network to play Pong solely based on the input frames of the game and the results of each round.
